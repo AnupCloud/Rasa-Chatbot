@@ -1,0 +1,113 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- corona_intro
+- corona_spread
+- corona_food_spread
+- warm_weather
+- high_risk
+- ocr_faq
+- ocr_faq1
+- ocr_faq2
+- ocr_faq3
+- ocr_faq4
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by ROOMAN.
+  utter_corona_intro:
+  - text: Coronaviruses are a group of related viruses that cause diseases in mammals
+      and birds. In humans, coronaviruses cause respiratory tract infections that
+      can be mild, such as some cases of the common cold (among other possible causes,predominantly
+      rhinoviruses), and others that can be lethal, such as SARS, MERS, and COVID-19
+  utter_corona_spread:
+  - text: This virus was first detected in Wuhan City, Hubei Province, China.
+  utter_corona_food_spread:
+  - text: Coronaviruses are generally thought to be spread from person-to-person through
+      respiratory droplets. Currently there is no evidence to support transmission
+      of COVID-19 associated with food. Before preparing or eating food it is important
+      to always wash your hands with soap and water for 20 seconds for general food
+      safety. Throughout the day wash your hands after blowing your nose, coughing
+      or sneezing, or going to the bathroom.
+  utter_warm_weather:
+  - text: It is not yet known whether weather and temperature impact the spread of
+      COVID-19. Some other viruses, like the common cold and flu, spread more during
+      cold weather months but that does not mean it is impossible to become sick with
+      these viruses during other months.  At this time, it is not known whether the
+      spread of COVID-19 will decrease when weather becomes warmer.  There is much
+      more to learn about the transmissibility, severity, and other features associated
+      with COVID-19 and investigations are ongoing.
+  utter_high_risk:
+  - text: Older adults and people of any age who have serious underlying medical conditions
+      may be at higher risk for more serious complications from COVID-19. These people
+      who may be at higher risk of getting very sick from this illness, includes;
+      Older adults, People who have serious underlying medical conditions like...
+      Heart disease, Diabetes, Lung disease
+  utter_ocr_stored:
+  - text: It is saved in [Saved Text] variable which is accessible from Text Input
+      operation and Set Variable operation.
+  utter_text_input:
+  - text: Being at the foremost layer of the screen does not necessarily mean Windows
+      focus is on it. You must reactivate the App by inserting Select Window operation
+      or Click and Focus operation immediately before.
+  utter_plugin_work:
+  - text: Upto STU ver. R19.0917, it has three (3) variable schemes. They are 1)predefined
+      global variables, 2)user defined variables, and 3)plugin defined variables.
+      In the plugin, only when you desire a CSV to stored as a variable, you must
+      use the plugin defined variable. In this case, the values are stored in multi
+      dimesional CSV format and you can acces data by a notation as {{group name.header
+      name(row number)}}. In this case, the header name comes from the first row of
+      the data (row = 0). If the first row contains data check box has been checked
+      the header name are automatically assigned to A,B,C,D, as in Excel sheet (in
+      uppercase alphabets). The row number must be an integer.
+  utter_crash_faq:
+  - text: "If you have tested the bot before the crash, the last tested bot is stored\
+      \ in this folder.\n(C/ users/ yourusername/ appData/ roaming/ argosScenarioStudio/\
+      \ scenarioFiles/ testRun).\nWe are very sorry that STU crashed on you. Please\
+      \ send the log to our tech support team and we will try our best to prevent\
+      \ it from happening in the future."
+  utter_change_path:
+  - text: "The default save path has been changed from ‘Application data’ to ‘Documents’\
+      \ since R19.0917.\nIt won't change with the update, but it will change easily\
+      \ when loading the bot from another folder.\nDefault Bot storage -  %homepath%\\\
+      documents\\ArgosScenarioStudio\\ScenarioFiles\nIt is a folder where you opened\
+      \ (or saved) a Bot at the previous running of STU.\nSTU always remembers the\
+      \ last folder information. ( stored in Windows Registry )\n\n\nHow to change\
+      \ the default save path Default location - %homepath%\\documents\\ArgosScenarioStudio\\\
+      ScenarioFiles Change ‘Scenario File path’ in ‘Settings > Options’ Move the existing\
+      \ Bots to ‘Default location’ and load any Bot into STU."
+actions:
+- utter_greet
+- utter_did_that_help
+- utter_goodbye
+- utter_iamabot
+- utter_corona_intro
+- utter_corona_spread
+- utter_corona_food_spread
+- utter_warm_weather
+- utter_high_risk
+- utter_cheer_up
+- utter_happy
+- utter_ocr_stored
+- utter_text_input
+- utter_plugin_work
+- utter_crash_faq
+- utter_change_path
